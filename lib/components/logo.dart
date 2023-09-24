@@ -11,9 +11,15 @@ class Logo extends StatelessWidget {
     return Column(
       children: [
         SvgPicture.asset(
-
-        )
+          "assets/check.svg",
+          height: 70,
+          width: 70,
+        ),
+        Text(
+          title,
+          style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+        ),
       ],
-    )
+    );
   }
 }
