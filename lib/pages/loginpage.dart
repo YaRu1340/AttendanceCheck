@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:app/components/logo.dart';
+import 'package:app/components/custom_form.dart';
 import 'package:app/size.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
-  @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,8 +12,19 @@ class _LoginPageState extends State<LoginPage> {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            const SizedBox(height: xlarge_gap),
-            const Logo("Login"),
+            SizedBox(height: xlarge_gap),
+            SizedBox(height: xlarge_gap),
+            Text("Login", textAlign: TextAlign.center,
+              style:  TextStyle(
+                color: Colors.black,
+                fontSize: 45,
+                fontFamily: 'Zilla Slab',
+                fontWeight: FontWeight.bold,
+                height: 0,
+              ),
+            ),
+            SizedBox(height: large_gap), // 1. 추가
+            CustomForm(), // 2. 추가
           ],
         ),
       ),
