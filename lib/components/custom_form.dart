@@ -16,6 +16,10 @@ class CustomForm extends StatelessWidget {
           SizedBox(height: medium_gap),
           CustomTextFormField("Password"),
           SizedBox(height: large_gap),
+          TextButton(
+              onPressed: () {},
+              child: Text("Login"),
+          )
         ],
       ),
     );
